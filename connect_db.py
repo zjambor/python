@@ -20,7 +20,7 @@ print (check_conn_result)
 table = []
 headers = ["Empno", "Ename", "Job", "MGR", "Hiredate", "sal", "comm", "Deptno"]
 
-c.execute('select * from emp') # use triple quotes if you want to spread your query across multiple lines
+c.execute('select employee_id,last_name,job_id,manager_id,hire_date,salary,commission_pct,department_id from employees') # use triple quotes if you want to spread your query across multiple lines
 for row in c:
     thislist = []
     empno = row[0]
@@ -76,4 +76,4 @@ def cursor(s):
     conn.close()
     return len(table)
 
-print("Number of rows:", cursor('select * from emp'))
+print("Number of rows:", cursor('select employee_id,last_name,job_id,manager_id,hire_date,salary,commission_pct,department_id from employees'))
