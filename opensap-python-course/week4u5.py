@@ -19,11 +19,9 @@ with open("invoice_data.txt", "r") as file:
     for line in file:
         item = line.strip().split(" ")
         name = item[0]
-        numberofitems = item[1]
-        price = item[2]
+        numberofitems = int(item[1])
+        price = float(item[2])
         items.append((name, numberofitems, price))
 
 for item in items:
-    numberofitems = int(item[1])
-    price = float(item[2])
-    print(f"{item[0]:15s}{numberofitems:3}{price:7.2f}{numberofitems * price:8.2f}")
+    print(f"{item[0]:15s}{item[1]:3}{item[2]:7.2f}{item[1] * item[2]:8.2f}")
