@@ -25,3 +25,8 @@ with open("invoice_data.txt", "r") as file:
 
 for item in items:
     print(f"{item[0]:15s}{item[1]:3}{item[2]:7.2f}{item[1] * item[2]:8.2f}")
+
+strng = "PS D:\Downloads\Onedrive\python\python\opensap-python-course"
+
+print(strng.count("o",0,))
+print(strng[3:15])
