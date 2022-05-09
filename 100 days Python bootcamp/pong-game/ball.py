@@ -11,8 +11,8 @@ class Ball(Turtle):
         self.y_direction = 1
 
     def move(self):
-        new_x = self.xcor() + 2 * self.x_direction
-        new_y = self.ycor() + 2 * self.y_direction
+        new_x = self.xcor() + 4 * self.x_direction
+        new_y = self.ycor() + 4 * self.y_direction
         self.goto(new_x, new_y)
 
     def change_direction_wall(self):
