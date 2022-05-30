@@ -18,11 +18,19 @@ game_is_on = True
 
 screen.listen()
 
+def stop():
+    global game_is_on
+    scoreboard.reset()
+    snake.reset()
+    if game_is_on:
+        game_is_on = False
+
 screen.onkey(snake.left, "Left")
 screen.onkey(snake.right, "Right")
 screen.onkey(snake.up, "Up")
 screen.onkey(snake.down, "Down")
 screen.onkey(snake.clear, "c")
+screen.onkey(stop, "Escape")
 
 while game_is_on:    
     screen.update()
@@ -36,12 +44,16 @@ while game_is_on:
         food.refresh()
 
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-        game_is_on = False
-        scoreboard.game_over()
+        # game_is_on = False
+        # scoreboard.game_over()
+        scoreboard.reset()
+        snake.reset()
 
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
-            game_is_on = False
-            scoreboard.game_over()
+            # game_is_on = False
+            # scoreboard.game_over()
+            scoreboard.reset()
+            snake.reset()
 
 screen.exitonclick()
