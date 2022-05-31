@@ -6,6 +6,7 @@ from turtle import Screen
 ANGLE = 360
 
 tim = t.Turtle()
+screen = Screen()
 
 colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
 
@@ -23,4 +24,4 @@ def draw_shape(_angle, _num_sides):
 num_sides = 11
 draw_shape(ANGLE, num_sides)
 
-t.mainloop()
+screen.mainloop()
