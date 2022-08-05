@@ -1,5 +1,5 @@
-from closure import *
 from functools import reduce
+from closure import pow_of_2
 
 li = [1,3,5,2,5,7,8]
 li2 = list(map(pow_of_2, li))

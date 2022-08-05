@@ -1,6 +1,3 @@
-from numpy import inner
-
-
 def outer_fn(n):
     print('outer_fn')
     def inner_fn(x):
