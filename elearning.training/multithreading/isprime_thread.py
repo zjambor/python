@@ -27,7 +27,7 @@ def test_primes():
         q.put(n)
 
     threads = []
-    for _ in range(1):
+    for _ in range(4):
         t = PrimeChecker(q)
         threads.append(t)
         t.start()
