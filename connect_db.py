@@ -1,7 +1,12 @@
+import sys
 import cx_Oracle
-import config as cfg
 from tabulate import tabulate
 import datetime
+from pathlib import Path
+
+path_root = Path(__file__).parents[1]
+sys.path.append(str(path_root))                
+import python_config.config as cfg
 
 try:
     conn = cx_Oracle.connect(cfg.user, cfg.password, dsn=cfg.dsn_tns, encoding="UTF-8") 
@@ -51,7 +56,7 @@ def cursor(s):
         conn = cx_Oracle.connect(cfg.user, cfg.password, dsn=cfg.dsn_tns) 
     except cx_Oracle.Error as error:
         print(error)
-    table = []
+    table.clear()
     c = conn.cursor()
     c.execute(s)
     for row in c:

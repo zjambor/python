@@ -1,5 +1,5 @@
 import unittest
-# import connect_db as cdb
+import connect_db as cdb
 # import cx_Oracle
 # import config as cfg
 
