@@ -35,3 +35,8 @@ def factorial2(n):
 
 print(factorial(5))
 print(factorial2(5))
+
+# Ismétlés nélküli kombináció: n! / k!(n-k)!
+print("Hatos: ", factorial2(45) / (factorial2(6) * factorial2(45-6)))
+print("Ötös: ", factorial2(90) / (factorial2(5) * factorial2(90-5)))
+print("Skandi: ", factorial2(35) / (factorial2(7) * factorial2(35-7)))
