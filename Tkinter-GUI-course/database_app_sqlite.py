@@ -68,10 +68,8 @@ def delete():
 def quit_program():
     # commit changes
     conn.commit()
-    
     # close conn
     conn.close()
-
     root.quit()
 
 # create text boxes
