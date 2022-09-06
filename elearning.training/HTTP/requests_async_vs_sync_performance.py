@@ -1,7 +1,6 @@
 import asyncio
 import aiohttp
 import requests
-import random
 import time
 
 async def fetch():
@@ -30,7 +29,7 @@ async def main(num_requests):
     end = time.time()
     print(f'async took {end - start}')
 
-async def main_sync(num_requests):
+def main_sync(num_requests):
     start = time.time()
     with requests.Session() as s:
         for _ in range(num_requests):
