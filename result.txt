@@ -1,3 +1,0 @@
-Player1 wins: 28
-Player2 wins: 35
-Draws: 37
