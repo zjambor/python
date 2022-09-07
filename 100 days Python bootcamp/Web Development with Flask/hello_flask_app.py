@@ -9,5 +9,10 @@ def hello_world():
 # SET FLASK_APP=hello_flask.py
 # flask run
 
+# add variable to url
+@app.route('/<name>')
+def greet(name):
+    return f'Hello, {name}!'
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
