@@ -14,5 +14,9 @@ def hello_world():
 def greet(name):
     return f'Hello, {name}!'
 
+@app.route('/<name>/<int:number>')
+def greet_with_years(name, number):
+    return f'Hello, {name}, you are {number} years old!'
+
 if __name__ == "__main__":
     app.run(debug=True)
