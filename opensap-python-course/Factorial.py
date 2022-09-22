@@ -40,3 +40,33 @@ print(factorial2(5))
 print("Hatos: ", factorial2(45) / (factorial2(6) * factorial2(45-6)))
 print("Ötös: ", factorial2(90) / (factorial2(5) * factorial2(90-5)))
 print("Skandi: ", factorial2(35) / (factorial2(7) * factorial2(35-7)))
+
+def print_fact(n, k):
+    print(factorial2(n) / (factorial2(k) * factorial2(n-k)))
+
+n, k = 8, 7
+print_fact(n, k)
+
+n, k = 9, 7
+print_fact(n, k)
+
+n, k = 10, 7
+print_fact(n, k)
+
+n, k = 15, 7
+print_fact(n, k)
+
+n, k = 35, 7
+print_fact(n, k)
+
+n, k = 45, 6
+print_fact(n, k)
+
+print(factorial2(15))
+print(factorial2(7))
+print(factorial2(8))
+print(factorial2(35))
+
+# 
+# Ismétlés nélküli variáció
+# n! / (n-k)!
