@@ -45,3 +45,23 @@ for item in (d1, d2):
     d3.update(item)
 
 print(d3)
+
+dictionary = {}
+my_list = ['a', 'b', 'c', 'd']
+
+for i in range(len(my_list) - 1):
+    dictionary[my_list[i]] = (my_list[i], )
+
+print(dictionary)
+
+for i in sorted(dictionary.keys()):
+    k = dictionary[i]
+    print(k[0])
+
+dictionary = {'one': 'two', 'three': 'one', 'two': 'three'}
+v = dictionary['one']
+ 
+for k in range(len(dictionary)):
+    v = dictionary[v]
+ 
+print(v)

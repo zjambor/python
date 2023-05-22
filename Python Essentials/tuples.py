@@ -30,3 +30,23 @@ tup = 1, 2, 3, 2, 4, 5, 6, 2, 7, 2, 8, 9
 duplicates = tup.count(2)
 
 print(duplicates)    # outputs: 4
+
+print(t2[0:3])
+
+tup = (1, 2, 4, 8)
+tup = tup[1:-1]
+tup = tup[0]
+print(tup)
+
+
+try:
+    value = input("Enter a value: ")
+    print(value/value)
+except ValueError:
+    print("Bad input...")
+except ZeroDivisionError:
+    print("Very bad input...")
+except TypeError:
+    print("Very very bad input...")
+except:
+    print("Booo!")
