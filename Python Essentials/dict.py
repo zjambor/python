@@ -65,3 +65,11 @@ for k in range(len(dictionary)):
     v = dictionary[v]
  
 print(v)
+
+a = 1
+b = 0
+a = a ^ b
+b = a ^ b
+a = a ^ b
+ 
+print(a, b)

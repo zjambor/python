@@ -2,7 +2,7 @@ from sys import path
 
 # path.append('D:\\DATA\\Onedrive\\python\\python\\Python Essentials\\packages')
 
-path.append('Python Essentials\\packages\\extrapack.zip')
+# path.append('Python Essentials\\packages\\extrapack.zip')
 
 import extra.good.best.sigma as sig
 import extra.good.alpha as alp
