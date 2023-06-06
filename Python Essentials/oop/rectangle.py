@@ -52,3 +52,5 @@ r2 = Rectangle(10, 20)
 
 print(r1 < r2)
 print(r1)
+
+print(r1.__dict__)
