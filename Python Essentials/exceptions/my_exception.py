@@ -17,7 +17,7 @@ except Exception as e:
 try:
     raise Exception("my exception")
 except Exception as e:
-    print(e, e.__str__(), sep=' : ', end=' : ')
+    print(e, str(e), sep=' : ', end=' : ')
     print_args(e.args)
 
 try:
@@ -25,3 +25,17 @@ try:
 except Exception as e:
     print(e, e.__str__(), sep=' : ', end=' : ')
     print_args(e.args)
+
+
+class Ex(Exception):
+    def __init__(self, msg):
+        Exception.__init__(self, msg + msg)
+        self.args = (msg,)
+
+
+try:
+    raise Ex('ex')
+except Ex as e:
+    print(e)
+except Exception as e:
+    print(e)
