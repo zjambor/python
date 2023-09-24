@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import lxml
 
 class WikiWorker():
     def __init__(self):
@@ -13,6 +14,8 @@ class WikiWorker():
         for table_row in table_rows[1:]:
             symbol = table_row.find('td').text.strip('\n')
             yield symbol
+
+# //*[@id="constituents"]/tbody/tr[44]/td[1]/a      //*[@id="constituents"]/tbody/tr[1]/td[1]/a
 
     def get_sp_500_companies(self):
         response = requests.get(self._url)
