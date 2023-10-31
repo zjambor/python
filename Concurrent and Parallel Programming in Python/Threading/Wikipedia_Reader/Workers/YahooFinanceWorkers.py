@@ -20,4 +20,3 @@ class YahooFinanceWorker(threading.Thread):
         print(page_contents.xpath('//*[@id="quote-header-info"]/div[3]/div[1]/div[1]/fin-streamer[1]'))
         #price = float(page_contents.xpath('//*[@id="quote-header-info"]/div[3]/div[1]/div[1]/fin-streamer[1]')[0].text)
         #print(price)
-
