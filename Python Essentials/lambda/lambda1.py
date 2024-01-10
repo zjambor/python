@@ -19,3 +19,7 @@ def poly(x):
 
 print_function([x for x in range(-2, 3)], poly)
 print_function([x for x in range(-2, 3)], lambda x: 2 * x**2 - 4 * x + 2)
+
+any_list = [1, 2, 3, 4]
+even_list = list(map(lambda n: n | 1, any_list))
+print(even_list)
