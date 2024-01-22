@@ -18,3 +18,9 @@ print(list(powers_of_2))
 
 l_powers_of_2 = lambda n: (2 ** x for x in range(n))
 print(list(l_powers_of_2(9)))
+
+for x in (elem * 2 for elem in range(5)):
+    print(x, end='')
+
+for x in [elem * 2 for elem in range(5)]:
+    print(x, end='')
